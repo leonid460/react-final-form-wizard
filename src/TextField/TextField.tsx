@@ -18,7 +18,8 @@ export const TextField = ({
     <Field name={name}>
       {({ input, meta }) => {
         const errorMessage = meta.error;
-        const isInvalid = !!(errorMessage && meta.touched);
+        const isTocuhed = meta.touched;
+        const isInvalid = !!(errorMessage && isTocuhed);
 
         return (
           <Styled.Container>
