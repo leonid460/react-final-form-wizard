@@ -2,10 +2,11 @@ import { useState } from "react";
 import { SidePanel } from "./SidePanel";
 import * as Styled from "./styled";
 import { Wizard } from "./Wizard";
-import { MainStep } from "./MainStep";
-import { DocumentsStep } from "./DocumentsStep";
+import { MainStep } from "./steps/MainStep";
+import { DocumentsStep } from "./steps/DocumentsStep";
+import { EducationStep } from "./steps/EducationStep";
 
-const stepsNames = ["Main", "Documents"];
+const stepsNames = ["Main", "Documents", "Education"];
 
 function makeSidePanelItems(
   stepsNamesList: string[],
@@ -40,6 +41,7 @@ export const Worksheet = () => {
         >
           <MainStep />
           <DocumentsStep />
+          <EducationStep />
         </Wizard>
       </Styled.WizardWrapper>
       <SidePanel items={sidePanelItems} />
